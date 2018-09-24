@@ -1,0 +1,41 @@
+.weather__day {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 5px;
+  color: aliceblue;
+  padding: 1rem 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.weather__day-title {
+  margin: 0;
+  position: relative;
+  text-shadow: 2px 2px 0 black;
+  transform: translate(-0.75rem);
+}
+
+.weather__day-word {
+  color: #fcda49;
+  font-size: 2rem;
+  margin-right: 0.25rem;
+}
+
+.weather__day-num {
+  font-size: 1.25rem;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.weather__chunk {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .weather__day {
+    padding: 1rem 1rem 0;
+  }
+  .weather__day-title {
+    transform: translate(-1.25rem);
+  }
+}

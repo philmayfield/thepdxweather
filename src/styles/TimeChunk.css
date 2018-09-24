@@ -1,0 +1,134 @@
+.weather__time-chunk,
+.weather__info,
+.weather__time,
+.weather__details,
+.weather__wind,
+.weather__rain,
+.weather__snow {
+  align-items: center;
+  display: flex;
+}
+
+.weather__time,
+.weather__temp {
+  font-weight: 900;
+}
+
+.weather__time-chunk {
+  padding: 1rem 0;
+  flex-direction: column;
+}
+
+.weather__info {
+  justify-content: space-around;
+}
+
+.weather__time-chunk + .weather__time-chunk {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.weather__time {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.weather__temp {
+  font-size: 1.5rem;
+}
+
+.weather__time-hour {
+  color: #3190f2;
+  font-size: 2rem;
+  margin-right: 0.25rem;
+}
+
+.weather__icon {
+  height: auto;
+  margin: 0 1.5rem;
+  width: 2.5rem;
+}
+
+.weather__details {
+  align-items: center;
+  display: grid;
+  font-size: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 0.5rem;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.weather__details > div {
+  white-space: nowrap;
+}
+
+.weather__wind,
+.weather__rain,
+.weather__snow {
+  justify-content: center;
+}
+
+.weather__wind-indicator {
+  background-image: url('http://www.philmayfield.com/img/baseline_arrow_downward_white_18dp.png');
+}
+
+.weather__drop-indicator {
+  background-image: url('http://www.philmayfield.com/img/baseline_drop_white_18dp.png');
+}
+
+.weather__indicator {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 1.5rem;
+  margin-right: 0.25rem;
+  width: 1.5rem;
+}
+
+@media screen and (min-width: 425px) {
+  .weather__time {
+    width: 5rem;
+  }
+
+  .weather__temp {
+    width: 4rem;
+  }
+
+  .weather__icon {
+    margin: 0 1.5rem 0 0;
+  }
+
+  .weather__time-chunk {
+    flex-direction: row;
+  }
+
+  .weather__info,
+  .weather__wind,
+  .weather__rain,
+  .weather__snow {
+    justify-content: flex-start;
+  }
+
+  .weather__details {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .weather__details {
+    font-size: 2.5vw;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .weather__details {
+    font-size: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 2rem;
+  }
+}
